@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Karthikk P S — AI/ML Portfolio</title>
+  <meta name="description" content="Karthikk P S builds practical AI and machine-learning projects with AI-assisted workflows, turning messy problems into working proof.">
+  <meta property="og:title" content="Karthikk P S — AI/ML Portfolio">
+  <meta property="og:description" content="Practical AI/ML work, case studies, and the decisions behind the build.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pskarthikk.github.io/flyrank-ai-capstone-portfolio/">
+  <meta name="theme-color" content="#0b0d10">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="#top">KARTHIKK<span>.</span></a>
+  <nav>
+    <a href="#work">Work</a>
+    <a href="#story">Story</a>
+    <a href="#build">Build</a>
+  </nav>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="eyebrow">AI / MACHINE LEARNING · BUILDING IN PUBLIC</div>
+  <h1>I build practical AI/ML projects and use AI to <em>ship faster.</em></h1>
+  <p class="lead">A portfolio of real experiments, working demos, and honest notes about what worked, what broke, and what I learned.</p>
+  <div class="actions">
+    <a class="button primary" href="#work">See the work ↓</a>
+    <a class="button" href="https://github.com/pskarthikk" target="_blank" rel="noreferrer">GitHub ↗</a>
+  </div>
+  <div class="proof-strip">
+    <span>30,000 pages</span><span>Random Forest</span><span>Precision@50: 0.740</span><span>AI-assisted build</span>
+  </div>
+</section>
+
+<section id="work" class="section">
+  <div class="section-head"><span>01</span><h2>Selected work</h2></div>
+  <article class="case">
+    <div class="case-top">
+      <div><p class="kicker">FLYRANK ML INTERNSHIP · ML-02</p><h3>Refresh / Content Opportunity Scoring</h3></div>
+      <span class="status">SHIPPED</span>
+    </div>
+    <p class="case-intro">Which content pages should be prioritized for review so editors can focus on pages with the highest potential for improvement?</p>
+    <div class="case-grid">
+      <div><h4>Problem</h4><p>Editors cannot manually inspect every page. The goal was to rank pages so a small review queue contains more likely opportunities.</p></div>
+      <div><h4>What I did</h4><p>Explored the starter data, built a readable baseline, compared a hand-written rule with ML models, and evaluated the ranking with Precision@K.</p></div>
+      <div><h4>What came of it</h4><p>The starter experiment reached <strong>0.740 Precision@50</strong> with Random Forest versus <strong>0.240</strong> for the hand-written rule.</p></div>
+    </div>
+    <div class="metric-row">
+      <div><b>30k</b><span>content items</span></div>
+      <div><b>32</b><span>clients</span></div>
+      <div><b>16,262</b><span>declining pages</span></div>
+      <div><b>0.740</b><span>best Precision@50</span></div>
+    </div>
+    <div class="case-links">
+      <a href="https://pskarthikk.github.io/flyrank-ml-internship/" target="_blank" rel="noreferrer">Project repo/site ↗</a>
+      <a href="https://pskarthikk.github.io/flyrank-ml-internship/work/paper/" target="_blank" rel="noreferrer">Research paper ↗</a>
+    </div>
+  </article>
+</section>
+
+<section id="demo" class="section demo-section">
+  <div class="section-head"><span>02</span><h2>Working feature</h2></div>
+  <div class="demo-card">
+    <div>
+      <p class="kicker">CONTENT REVIEW PRIORITY PLAYGROUND</p>
+      <h3>Try the ranking logic</h3>
+      <p>Change the signals below. The browser recalculates a transparent priority score and explains the result. This is a portfolio demo of the decision logic, not a replacement for the trained model.</p>
+    </div>
+    <div class="controls">
+      <label>Traffic trend <output id="trafficOut">-25%</output><input id="traffic" type="range" min="-60" max="20" value="-25"></label>
+      <label>Click trend <output id="clickOut">-18%</output><input id="clicks" type="range" min="-60" max="20" value="-18"></label>
+      <label>Rank change <output id="rankOut">+6</output><input id="rank" type="range" min="-10" max="15" value="6"></label>
+      <label>Content age <output id="ageOut">24 mo</output><input id="age" type="range" min="1" max="60" value="24"></label>
+    </div>
+    <div class="score-panel">
+      <div class="score"><span id="score">78</span><small>/ 100</small></div>
+      <div><strong id="priority">High priority</strong><p id="explain">The combination of declining traffic/clicks, worsening rank, and older content raises review priority.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="story" class="section split">
+  <div class="section-head"><span>03</span><h2>Honest story</h2></div>
+  <div class="story">
+    <p>I built this portfolio because I wanted a place where I could show the work instead of repeatedly saying that I am learning AI and machine learning.</p>
+    <p>The biggest help from AI was not a single code snippet. It was having a partner that could turn a vague idea into a sequence of small decisions, explain unfamiliar implementation details, and help me iterate quickly. That let me spend more time deciding what the project should prove.</p>
+    <p>The limitation was just as useful: AI can make a site look finished before the underlying claims have been checked. Metrics, links, edge cases, and what actually happened in the project still need human verification. I learned to treat AI output as a draft and the evidence as the source of truth.</p>
+    <p class="signature">— Karthikk</p>
+  </div>
+</section>
+
+<section id="build" class="section">
+  <div class="section-head"><span>04</span><h2>How this was built</h2></div>
+  <div class="build-grid">
+    <article><span class="num">01</span><h3>Stack decision</h3><p>Plain HTML, CSS and JavaScript keeps the portfolio fast, portable and easy to publish on GitHub Pages. No framework is needed for this site's job.</p></article>
+    <article><span class="num">02</span><h3>What broke</h3><p>The first version of the interactive score could easily look like a trained ML model even though it was only a transparent browser-side demonstration. The fix was to label it clearly as a demo of decision logic.</p></article>
+    <article><span class="num">03</span><h3>What comes next</h3><p>The next case to add is the FlyRank ML Internship capstone work: a fuller content-opportunity scoring case with the final research narrative, model comparison and evidence.</p></article>
+  </div>
+</section>
+
+<section class="section next">
+  <div class="next-card">
+    <p class="kicker">KEEP BUILDING</p>
+    <h2>Next case: FlyRank ML Internship Capstone</h2>
+    <p>Use the same three beats every time: <strong>Problem → What I did → What came of it.</strong> Add the case under Selected Work, link the repo/paper, then add one metric and one honest limitation.</p>
+    <p class="reminder"><span>REMINDER</span> Add the case after the capstone is finalized.</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div><strong>KARTHIKK P S</strong><span> · AI / ML</span></div>
+  <div class="badge"><a href="https://aifluency.flyrank.ai/" target="_blank" rel="noreferrer" aria-label="FlyRank AI Fluency graduate badge">✦ FLYRANK AI FLUENCY · GRADUATE</a></div>
+  <div><a href="https://github.com/pskarthikk" target="_blank" rel="noreferrer">GitHub ↗</a></div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
